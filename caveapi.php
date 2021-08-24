@@ -11,7 +11,7 @@ $text=str_replace("\r\n","",$text);
 $jieshao=$text;
 if($_GET["encode"] == "js")
 {
-echo '(function cave(){var cave="回声洞 - ' . $jieshao . '";var dom=document.querySelector(".cave");Array.isArray(dom)?dom[0].innerText=cave:dom.innerText=cave;})()';
+echo '(function cave(){var cave="' . $jieshao . '";var dom=document.querySelector(".cave");Array.isArray(dom)?dom[0].innerText=cave:dom.innerText=cave;})()';
 }else{
 echo "$jieshao";
 }
