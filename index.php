@@ -55,13 +55,14 @@
     })
     .then(function (data) {
       var cave = document.getElementById('cave');
-      hitokoto.innerText = data.cave; 
+      cave.innerText = data.cave; 
     })
     .catch(function (err) {
       console.error(err);
     })
         }
         window.setTimeout(loveEchoCove, 10000);
+        loveEchoCove();
       </script>
 
     <!-- MDUI JavaScript -->
