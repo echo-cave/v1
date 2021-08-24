@@ -1,4 +1,6 @@
-﻿<?php
+<?php
+ignore_user_abort(true);
+set_time_limit(0);
 $ch = curl_init();
 curl_setopt($ch, CURLOPT_URL, "https://cdn.jsdelivr.net/gh/echo-cave/cave@main/cave.txt");
 curl_setopt($ch, CURLOPT_RETURNTRANSFER, 1);
