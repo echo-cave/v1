@@ -15,6 +15,17 @@
       crossorigin="anonymous"
     />
     <title>回声洞</title>
+    <!-- BrowserHappy -->
+  <script>
+    var browsehappy_config = {
+      ie: 12,
+      type: 'box',
+      debug: false,
+      tip: "站点目前不支持 IE。请 ",
+      show: ['firefox', 'chrome']
+    };
+  </script>
+  <script src="https://cdn.jsdelivr.net/gh/a632079/browserhappy@0.0.1/browserhappy.min.js"></script>
   </head>
   <body class="mdui-appbar-with-tab-larger">
 <div class="mdui-appbar mdui-appbar-fixed">
@@ -32,8 +43,26 @@
 </div>
     <div class="mdui-container mdui-appbar-with-tab-larger">
     <center id="h">
-    <h1 style="color: #3c5675;" class="cave"></h1>
+    <h1 style="color: #3c5675;" id="cave"></h1>
     </center>
+      
+      <script>
+        function loveEchoCove() {
+    // Love Echo-Cove!
+    fetch('http://frp.rdpstudio.top:31000/caveapi.php?encode=json')
+    .then(function (res){
+      return res.json();
+    })
+    .then(function (data) {
+      var cave = document.getElementById('cave');
+      hitokoto.innerText = data.cave; 
+    })
+    .catch(function (err) {
+      console.error(err);
+    })
+        }
+        window.setTimeout(loveEchoCove, 10000);
+      </script>
 
     <!-- MDUI JavaScript -->
     <script
